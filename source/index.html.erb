@@ -1,0 +1,50 @@
+<h2>Parsley.js Form Validation</h2>
+<div class="form">
+
+    <form id="contactform" data-parsley-validate="">
+
+      <label for="name"> First Name</label>
+
+        <input id="name" name="name" placeholder="First Name" tabindex="1" type="text" required="" data-parsley-required-message="Please enter your First Name">
+
+
+        <label for="name"> Last Name</label>
+
+        <input id="name" name="name" placeholder="Last Name" tabindex="1" type="text" required="" data-parsley-required-message="Please enter your Last Name">
+
+      <label for="email">Email</label>
+
+        <input required="" id="email" name="email" placeholder="example@domain.com" type="email" data-parsley-type="email" data-parsley-trigger="change" data-parsley-required-message="Please enter a valid email!!!">
+
+
+
+      <label for="username">Create a username</label>
+
+        <input required="" id="username" name="username" placeholder="username" tabindex="2" type="text" data-parsley-required-message="UserName required">
+
+
+
+      <label for="password">Create a password</label>
+
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8" data-parsley-trigger="change" data-parsley-required-message="Password required">
+
+        <label for="repassword">Confirm your password</label>
+
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8" data-parsley-trigger="change" data-parsley-required-message="Re-enter password">
+
+
+        <label>Date of Birth</label>
+        <input required="" type="date" name="bday">
+
+         <label for="gender">Gender</label>
+            <p>
+                Male: <input type="radio" name="gender" id="genderM" value="M" data-parsley-required-message="Select your gender" required="">
+                Female: <input type="radio" name="gender" id="genderF" value="F">
+            </p>
+    <label for="phone">Contact Number</label>
+        <input data-parsley-required="true" id="phone" name="phone" placeholder="phone number" type="text" data-parsley-minlength="10" data-parsley-maxlength="10" data-parsley-trigger="change"data-parsley-required-message="this should be 10 digit number"> <br>
+        <input class="btn btn-success" name="submit" id="submit" tabindex="10" value="submit" type="submit">
+
+    </form>
+
+</div>
