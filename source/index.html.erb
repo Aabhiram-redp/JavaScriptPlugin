@@ -6,6 +6,17 @@
      var myDropzone = new Dropzone("#drag-dropzone");
    });
 </script>
+<script>
+$(document).ready(function(){
+
+   var now = moment();
+   var fullyear = now.format('MMMM Do YYYY, h:mm:ss a');
+   var day = now.format('dddd');
+        $('#result1').text(day);
+   $('#result').text(fullyear);
+
+});
+</script>
 <div class="container">
   <h3>Drag and Drop your file here!!!!....</h3>
   <div class="row col-md-10">
@@ -14,26 +25,7 @@
 </form>
 </div>
 </div>
-
-<div  class="row">
-  <h2>AJAX</h2>
-
-  <button type="button" onclick="loadDoc()">Request data</button>
-
-  <p id="demo"></p>
-
-
-  <script>
-  function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        document.getElementById("demo").innerHTML = xhttp.responseText;
-      }
-    };
-    xhttp.open("GET", "demo_get.asp", true);
-    xhttp.send();
-  }
-  </script>
-
+<div class="row">
+  <h3 id="result"></h3>
+  <h3 id="result1"></h3>
 </div>
